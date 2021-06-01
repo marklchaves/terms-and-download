@@ -13,12 +13,15 @@ function my_custom_popup_scripts() { ?>
 	
 			// Launch brochure download form that requires agreed terms first.
 			//$( '.launch-brochure-form' ).click(function () {
+
+			var p1 = '';
+			var p2 = '';
 			$( '#btn-launch-brochure-download-1' ).click(function () {
 			
 				console.log('[PUM] Clicked on brochure download button.');
 				
-				var p1 = $( '#btn-launch-brochure-download-1' ).data( 'popup1');
-				var p2 = $( '#btn-launch-brochure-download-1' ).data( 'popup2');
+				p1 = $( '#btn-launch-brochure-download-1' ).data( 'popup1');
+				p2 = $( '#btn-launch-brochure-download-1' ).data( 'popup2');
 				console.log(`[PUM] Popup 1 is ${p1} and popup 2 is ${p2}`);
 
 				// Wrap your custom code with the following logic to check
@@ -70,7 +73,7 @@ function my_custom_popup_scripts() { ?>
 				console.log('[PUM] Launching second popup.');
 
 				// Show the second popup (back-to-back).
-				PUM.open(132);
+				PUM.open(p2);
 				// Will only display if the following CSS is in place (back-to-back fix).
 				// https://gist.github.com/marklchaves/ffb949d75d916b64ed44f71d91ce9459
 			});
