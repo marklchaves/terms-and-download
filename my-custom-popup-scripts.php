@@ -36,8 +36,10 @@ function my_custom_popup_scripts() { ?>
 					console.log('[PUM] Clicked on brochure download button.');
 				
 					// Grab the first and second popup IDs from the data attributes.
-					var p1 = $( '#btn-launch-brochure-download-1' ).data( 'popup1');
-					var p2 = $( '#btn-launch-brochure-download-1' ).data( 'popup2');
+					// Note: using the class from above here. Replace with ID if 
+					// needed.
+					var p1 = $( 'btn-launch-brochure-download' ).data( 'popup1');
+					var p2 = $( 'btn-launch-brochure-download' ).data( 'popup2');
 					
 					if ( !p1 || !p2 ) return;
 				
