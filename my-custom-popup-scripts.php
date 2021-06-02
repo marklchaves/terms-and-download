@@ -10,17 +10,6 @@ function my_custom_popup_scripts() { ?>
 	<script type="text/javascript">
 						
 		(function ($, document, undefined) {
-			
-			// Force scroll top. Needs custom CSS to work.
-			$( '#pum-16' ).on('pumAfterOpen', function () {
-				// DEBUG
-				console.log('[PUM] scrollTop before = ' + $( '#popmake-16' ).scrollTop());
-				if ( $( '#popmake-16' ).scrollTop() !== 0) { // Only scroll to top if needed.
-					$( '#popmake-16' ).scrollTop(0);
-					// DEBUG
-					console.log('[PUM] scrollTop after = ' + $( '#popmake-16' ).scrollTop());
-				}
-			});
 	
 			// Utility Class for back-to-back popup sequences.		
 			function BackToBackPopups( p1 = '', p2 = '' ) {
