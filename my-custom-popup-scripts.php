@@ -26,7 +26,11 @@ function my_custom_popup_scripts() { ?>
 			
 			// IIFE for setting up the brochure download listener.
 			(function() {
-				$( '#btn-launch-brochure-download-1' ).click(function () {
+				// Use a class for the same terms on multiple download buttons.
+				// Use an ID selector if you need have different terms for
+				// specific download buttons.
+				$( '.btn-launch-brochure-download' ).click(function () {				
+				//$( '#btn-launch-brochure-download-1' ).click(function () {
 			
 					// DEBUG
 					console.log('[PUM] Clicked on brochure download button.');
@@ -68,7 +72,6 @@ function my_custom_popup_scripts() { ?>
 			// IIFE for setting up the terms agreement checkbox click.
 			(function() {
 				// Here's where we set the 30-day cookie.
-				//$( '.pum-content.popmake-content input[type="checkbox"]' ).on('pumAgreedToTerms', function () {
 				$( '.pum-tc-box__checkbox.popmake-tcp-input' ).on('pumAgreedToTerms', function () {
 
 					var popupId = backToBackPopups.popup1;
